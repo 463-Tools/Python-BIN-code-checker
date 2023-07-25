@@ -10,7 +10,6 @@ def arg_check(arg):
     arg.pop(0)
     # Split each item on comma or pipe, remove leading/trailing whitespace, and flatten the list
     arg = [x.strip() for temp in arg for x in re.split(',|\|', temp) if x.strip()]
-    print(arg)
     for x in arg:
         if path.isfile(x):
             with open(x, 'r') as f:
